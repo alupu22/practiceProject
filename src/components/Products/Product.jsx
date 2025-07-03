@@ -28,7 +28,7 @@ export default function Product({ product }) {
             {product.description}
           </p>
           <div className="mt-6 relative flex gap-6">
-            <HomeLogos />
+            <HomeLogos product={product} />
           </div>
         </div>
       </div>

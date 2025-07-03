@@ -29,7 +29,7 @@ export default function ProductGrid({ product }) {
         </div>
         <p className="text-slate-500 font-medium">{product.description}</p>
         <div className="relative flex gap-6">
-          <HomeLogos />
+          <HomeLogos product={product} />
         </div>
       </div>
     </NavLink>

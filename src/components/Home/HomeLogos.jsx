@@ -1,11 +1,14 @@
 import heartSmall from "../../assets/heart_small.svg";
 import cartSmall from "../../assets/cart_small.svg";
 import plusSign from "../../assets/plus.svg";
+import CartContext from "../../store/CartContext";
+import { useContext } from "react";
 
 export default function HomeLogos({ product }) {
+  const cartCtx = useContext(CartContext);
   return (
     <>
-      <button>
+      <button onClick={() => cartCtx.addItem(product)}>
         <img
           src={cartSmall}
           alt="cart-small"

@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
 import { PRODUCT_LIST } from "../../featuredProducts";
 import Rating from "./Rating";
 import ButtonPink from "../Home/ButtonPink";
@@ -18,9 +17,8 @@ export default function ProductDetail() {
     <>
       <div className="grid grid-rows-[8rem_auto]">
         <div></div>
-        <div className="grid grid-cols-[10rem_auto_10rem]">
-          <div></div>
-          <div className="grid grid-cols-2 justify-center items-center gap-20">
+        <div className="grid grid-cols-[10rem_auto_10rem] ">
+          <div className="col-start-2 grid grid-cols-[auto_auto] justify-center items-center gap-10">
             <div className="grid grid-cols-[12rem_30rem] gap-6 items-center">
               <div className="mt-4 flex flex-col gap-4">
                 {product.imgs.map((img, index) => (
@@ -60,7 +58,6 @@ export default function ProductDetail() {
               </ButtonPink>
             </div>
           </div>
-          <div></div>
         </div>
       </div>
       <div>

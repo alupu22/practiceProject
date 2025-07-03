@@ -1,22 +1,15 @@
 import Product from "./Product";
 import ProductGrid from "./ProductGrid";
 export default function ProductList({ isList, products }) {
+  const ComponentToRender = isList ? Product : ProductGrid;
+  const containerClasses = isList
+    ? "flex flex-col gap-6"
+    : "grid grid-cols-3 gap-6";
   return (
-    <>
-      {isList && (
-        <div className="flex flex-col gap-6">
-          {products.map((product) => (
-            <Product key={product.title} product={product} />
-          ))}
-        </div>
-      )}
-      {!isList && (
-        <div className="grid grid-cols-3 gap-6">
-          {products.map((product) => (
-            <ProductGrid key={product.title} product={product} />
-          ))}
-        </div>
-      )}
-    </>
+    <div className={containerClasses}>
+      {products.map((product) => (
+        <ComponentToRender key={product.id} product={product} />
+      ))}
+    </div>
   );
 }

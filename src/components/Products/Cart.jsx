@@ -10,10 +10,8 @@ export default function Cart() {
     (totalPrice, item) => totalPrice + item.quantity * item.newPrice,
     0
   );
-  const totalPrice = cartTotal + Number(cartCtx.shipingFee);
-  console.log(totalPrice);
-  console.log(cartTotal);
-  console.log("shipping", cartCtx.shipingFee);
+  const totalPrice = cartTotal + Number(cartCtx.shippingFee);
+
   return (
     <>
       {cartCtx.items.length <= 0 && (
@@ -44,7 +42,7 @@ export default function Cart() {
           <CartTotal
             subTotal={cartTotal}
             total={totalPrice}
-            shippingFee={cartCtx.shipingFee}
+            shippingFee={cartCtx.shippingFee}
           />
           <div></div>
         </div>

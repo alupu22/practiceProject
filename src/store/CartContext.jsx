@@ -1,7 +1,7 @@
 import { createContext, useReducer } from "react";
 
 const CartContext = createContext({
-  shipingFee: 10.0,
+  shippingFee: 10.0,
   items: [],
   addItem: (item) => {},
   removeItem: (id) => {},
@@ -74,7 +74,7 @@ export function CartContextProvider({ children }) {
   }
 
   const cartContext = {
-    shipingFee: 10.0,
+    shippingFee: 10.0,
     items: cart.items,
     addItem,
     removeItem,

@@ -12,7 +12,7 @@ export default function HeaderElems() {
       <div className="flex justify-evenly items-center">
         <HeaderElem
           imgSrc={emailLogo}
-          textlabel="alupu@griddynamics"
+          textlabel="andra@reactapp"
           isCart={false}
         />
         <HeaderElem imgSrc={phoneLogo} textlabel="000000000" isCart={false} />

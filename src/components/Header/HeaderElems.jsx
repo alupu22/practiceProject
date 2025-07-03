@@ -15,7 +15,7 @@ export default function HeaderElems() {
           textlabel="alupu@griddynamics"
           isCart={false}
         />
-        <HeaderElem imgSrc={phoneLogo} textlabel="0740513074" isCart={false} />
+        <HeaderElem imgSrc={phoneLogo} textlabel="000000000" isCart={false} />
       </div>
       <div className="flex justify-evenly items-center">
         <HeaderElem imgSrc={arrowLogo} textlabel="English" isCart={false} />
